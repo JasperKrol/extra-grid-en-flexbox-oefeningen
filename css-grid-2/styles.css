@@ -1,0 +1,62 @@
+.oefening2 {
+    width: 900px;
+    display: grid;
+    background-color: hsl(212, 36%, 90%);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 200px);
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+    ". . . m1"
+    "m2 m2 m3 ."
+    "m2 m2 m4 m5"
+    ". . . . "
+    ". m6 m7 m7"
+    "m8 m9 m7 m7"
+    "m10 . . ."
+;
+}
+
+.g1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(212, 43%, 65%) ;
+}
+
+#m1 {
+    grid-area: m1;
+}
+
+#m2 {
+    grid-area: m2;
+}
+#m3 {
+    grid-area: m3;
+}
+#m4 {
+    grid-area: m4;
+}
+#m5 {
+    grid-area: m5;
+}
+#m6{
+    grid-area: m6;
+}
+#m7 {
+    grid-area: m7;
+}
+#m8 {
+    grid-area: m8;
+}
+#m9 {
+    grid-area: m9;
+}
+#m10 {
+    grid-area: m10;
+}
+
+#m2,
+#m10 {
+    background-color: grey;
+}
