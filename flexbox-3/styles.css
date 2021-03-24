@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: Avenir, Arial, sans-serif;
+    color: white;
+}
+
+nav {
+    background-color: hsl(211, 65%, 14%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 120px;
+}
+
+#hamburger-menu {
+    width: 30px;
+    display: block;
+}
+
+.nav-container ul {
+    /*de menu items worden niet weergegeven op mobiel*/
+    list-style-type: none;
+    display: none;
+}
+
+/*view voor desktop en groter*/
+@media screen and (min-width: 576px) {
+    #hamburger-menu {
+        width: 30px;
+        display: none;
+    }
+
+    .nav-container ul {
+        /*de menu items worden weergegeven op desktop*/
+        list-style-type: none;
+        display: flex;
+        flex-basis: 500px;
+        justify-content: space-between;
+    }
+}
+

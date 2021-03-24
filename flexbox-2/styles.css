@@ -1,0 +1,104 @@
+/*
+:root {
+    --bg-color: hsl(40, 88%, 97%);
+    --item-color: hsl(196, 64%, 37%);
+    --font-color: hsl(211, 65%, 14%);
+    --item-width: 215px;
+    --item-height: 350px;
+}
+
+.bodyflex2 {
+    background-color: var(--bg-color);
+    color: var(--item-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.containterflex2 {
+    width: 1200px;
+}
+
+.articlecontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.flexarticle {
+    background-color: var(--item-color);
+    color: var(--font-color);
+    width: var(--item-width);
+    height: var(--item-height);
+    margin: 10px;
+    padding: 10px;
+    flex: 1 1 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 576px){
+    .container {
+        !*dit blijft gelden voor alles boven de 576px omdat we het daarna niet meer aanpassen*!
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        justify-content: space-between;
+    }
+}*/
+/*Base styles*/
+
+body {
+    background-color: hsl(40, 88%, 97%);
+    color: hsl(196, 64%, 37%);
+    font-family: Avenir, Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#page-wrapper {
+    width: 1200px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /*dit blijft gelden voor alles TOT 1200px omdat we het daarna toewijzen op space-between*/
+    justify-content: space-evenly;
+}
+
+.item {
+    background-color: hsl(196, 64%, 95%);
+    border-radius: 4px;
+    height: 350px;
+    padding: 16px;
+    margin: 16px;
+    /*Het item krijgt properties omdat het een child van een flexbox container is*/
+    flex-basis: 215px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    /*Het item wordt op zijn beurt ook weer een flex-container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 576px){
+    .container {
+        /*dit blijft gelden voor alles boven de 576px omdat we het daarna niet meer aanpassen*/
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        justify-content: space-between;
+    }
+}
